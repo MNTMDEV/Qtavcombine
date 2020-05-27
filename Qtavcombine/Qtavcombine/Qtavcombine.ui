@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtavcombineClass</class>
+ <widget class="QMainWindow" name="QtavcombineClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>414</width>
+    <height>238</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qtavcombine</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalAudio">
+        <item>
+         <widget class="QLabel" name="lbAudio">
+          <property name="text">
+           <string>音频文件</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txAudio"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnAudio">
+          <property name="text">
+           <string>浏览...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalVideo">
+        <item>
+         <widget class="QLabel" name="lbVideo">
+          <property name="text">
+           <string>视频文件</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txVideo"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnVideo">
+          <property name="text">
+           <string>浏览...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="btnConfirm">
+          <property name="text">
+           <string>保存</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnQuit">
+          <property name="text">
+           <string>退出</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>414</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Qtavcombine.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnQuit</sender>
+   <signal>clicked()</signal>
+   <receiver>QtavcombineClass</receiver>
+   <slot>on_quit_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>337</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAudio</sender>
+   <signal>clicked()</signal>
+   <receiver>QtavcombineClass</receiver>
+   <slot>on_audio_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>382</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnVideo</sender>
+   <signal>clicked()</signal>
+   <receiver>QtavcombineClass</receiver>
+   <slot>on_video_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnConfirm</sender>
+   <signal>clicked()</signal>
+   <receiver>QtavcombineClass</receiver>
+   <slot>on_confirm_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_quit_click()</slot>
+  <slot>on_confirm_click()</slot>
+  <slot>on_audio_click()</slot>
+  <slot>on_video_click()</slot>
+ </slots>
+</ui>
