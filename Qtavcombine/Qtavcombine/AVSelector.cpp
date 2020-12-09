@@ -23,10 +23,10 @@ void AVSelector::setMode(QFileDialog::FileMode mode)
 void AVSelector::setMediaType(int type)
 {
     if (type == TYPE_AUDIO) {
-        m_dlg.setNameFilter(QString::fromLocal8Bit("音频文件(*.mp3,*.mp4)\r\n所有文件(*.*)"));
+        m_dlg.setNameFilter(QString::fromLocal8Bit("音频文件(*.mp3;*.mp4);;所有文件(*.*)"));
     }
     else if (type == TYPE_VIDEO) {
-        m_dlg.setNameFilter(QString::fromLocal8Bit("视频文件(*.mp4,*.avi,*.flv)\r\n所有文件(*.*)"));
+        m_dlg.setNameFilter(QString::fromLocal8Bit("视频文件(*.mp4;*.mkv;*.flv);;所有文件(*.*)"));
     }
 }
 

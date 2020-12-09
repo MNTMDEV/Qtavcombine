@@ -36,6 +36,18 @@ void Qtavcombine::on_confirm_click()
     QByteArray audio = ui.txAudio->text().toLocal8Bit();
     QByteArray video = ui.txVideo->text().toLocal8Bit();
     QString text = sel.execute();
+    //fill extension
+    int pos = text.lastIndexOf("/");
+    QString name;
+    if (pos != -1) {
+        name = text.mid(pos + 1);
+    }
+    else {
+        name = text;
+    }
+    if (name.lastIndexOf(".") == -1) {
+        text += ".mp4";
+    }
     if (text != "") {
         //Ö´ÐÐ±£´æ
         AVCom com;
